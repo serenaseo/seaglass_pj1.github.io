@@ -1,0 +1,279 @@
+@import url('https://fonts.googleapis.com/css2?family=Dawning+of+a+New+Day&display=swap'); 
+@import url('https://fonts.googleapis.com/css2?family=Quattrocento&display=swap');
+.past-present-future {
+    position: fixed;
+    left: 285px; /* 왼쪽에 고정 */
+    top: 20px; /* 하단에 위치 */
+    display: flex; /* 수평으로 정렬 */
+    justify-content: space-around; /* 각 텍스트 사이에 간격을 균등하게 배치 */
+    align-items: center; /* 세로로 가운데 정렬 */
+    width: 100%; /* 화면 전체 폭 */
+    font-size: 17px; /* 기본 텍스트 크기 */
+    text-align: center; /* 텍스트 중앙 정렬 */
+}
+
+.past-present-future p {
+    margin: 0; /* 기본 마진 제거 */
+    opacity: 0.8; /* 기본 불투명도 */
+    transition: transform 0.3s ease, opacity 0.3s ease, font-size 0.3s ease, text-shadow 0.3s ease; /* 전환 효과 */
+}
+
+/* hover 효과 */
+.past-present-future p:hover {
+    transform: scale(1.2); /* 텍스트 크기 살짝 확대 */
+    opacity: 1; /* 불투명도 100% */
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.8), 0 0 20px rgba(255, 255, 255, 0.6); /* 텍스트에 빛나는 효과 추가 */
+}
+
+.font10{
+    font-family: 'Quattrocento', serif;
+    color: rgba(247, 243, 227, 1); 
+    text-align: center;
+}
+
+body {
+    background-image: url("1img/bg2-3.png"); 
+    background-size: cover;  
+    background-position: center;
+    background-repeat: repeat;
+    background-attachment: fixed;
+    margin: 0;
+    overflow: visible; /* 스크롤 방지 제거 */
+    height: 120vh;
+}
+
+h1.font2 {
+    font-family: 'Dawning of a New Day', cursive;
+    font-weight: 100;
+    color: rgba(247, 243, 227, 0.35);
+    font-size: 300px;
+    text-align: left;
+    position: fixed;  /* 화면에서 항상 보이도록 변경 */
+    right: -480px;
+    top: 52%;
+    transform: rotate(-90deg) translateY(-50%);
+    transform-origin: left center;
+    white-space: nowrap;
+    z-index: 9999; /* 더 높은 값으로 조정 */
+    opacity: 1;
+    transition: opacity 0.5s ease-in-out;
+
+
+}
+
+h1.font2:hover {
+    color: rgba(247, 243, 227, 0.9); /* 기존 색보다 더 진한 색 */
+    opacity: 1;
+}
+
+
+#text {
+    font-family: 'Quattrocento', serif;
+    font-size: 25px;
+    font-weight: 100;
+    text-align: right;
+    word-spacing: 3px;
+    color: rgba(247, 243, 227, 1);
+    position: relative;
+    right: 150px;
+    top: 265px;
+}
+
+p {
+    width: 70%;
+    display: block;
+    text-align: left; /* 오른쪽 → 왼쪽 정렬 */
+    color: rgb(247, 243, 227);
+  
+}
+#text2 {
+    font-family: 'Quattrocento', serif;
+    font-size: 25px;
+    font-weight: 100;
+    text-align: left;
+    word-spacing: 3px;
+    color: rgb(247, 243, 227);
+    position: relative;
+    left: 100px;
+    top: 700px;
+    opacity: 0;
+    transition: opacity 2s ease-in-out, transform 0.5s ease-in-out;
+    transform: translateY(30px);
+}
+
+#text2.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(5px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+.main-image {
+    position: fixed;
+    width: 200px;
+    height: auto;
+    top:10px;
+    left: 60%;
+    transform: translate(-25%, -25%);
+    opacity:50%;
+}
+
+.bar-image {
+    position: fixed;
+    width: 400px; 
+}
+
+.bar-image:nth-child(1) {
+    left: 20px;
+    z-index: 1;
+    bottom: -180px;
+}
+
+.bar-image:nth-child(2) {
+    left: 40px;
+    z-index: 2;
+    bottom: -160px;
+}
+
+.bar-image:nth-child(3) {
+    left: 35px;
+    bottom: -180px;
+    z-index: 1;
+}
+
+
+
+.click-image {
+    position: fixed;
+    bottom: -100px; 
+    left: 36.5%; 
+    width: 400px;
+    opacity: 80%;
+    display: block; 
+    margin: 0 auto; 
+}
+
+
+.next-button {
+    position: fixed; /* 화면에 고정 */
+    top: -80px; /* 위쪽 여백 */
+    right: -65px; /* 오른쪽 여백 */
+    width: 250px; /* 버튼 크기 (적당히 조절 가능) */
+    height: auto; /* 비율 유지 */
+    cursor: pointer; /* 클릭 가능하도록 설정 */
+    z-index: 100; /* 다른 요소 위에 배치 */
+    opacity: 0.8; /* 기본적으로 투명하게 설정 */
+    transition: opacity 0.5s ease, transform 0.3s ease; /* 부드러운 전환 효과 */
+}
+
+.next-button:hover {
+    opacity: 1;  /* 마우스 올리면 완전 불투명 */
+    transform: scale(1.2);  /* 약간 확대 */
+}
+
+.back-button {
+    position: fixed; /* 화면에 고정 */
+    top: -80px; /* 위쪽 여백 */
+    left: -65px; /* 왼쪽 여백 */
+    width: 250px; /* 버튼 크기 (적당히 조절 가능) */
+    height: auto; /* 비율 유지 */
+    cursor: pointer; /* 클릭 가능하도록 설정 */
+    z-index: 100; /* 다른 요소 위에 배치 */
+    opacity: 0.4; /* 기본적으로 투명하게 설정 */
+    transition: opacity 0.3s ease, transform 0.3s ease; /* 부드러운 전환 효과 */
+}
+
+.back-button:hover, .next-button:hover {
+    opacity: 1;  /* 마우스 올리면 완전 불투명 */
+    transform: scale(1.2);  /* 약간 확대 */
+}
+
+.clicktext {
+    position: fixed;
+    top: 30px;  /* 원하는 만큼 조절 */
+    right: 50px; /* 오른쪽 끝에서 20px 간격 */
+    font-size: 20px; /* 크기 조정 */
+    color: rgba(247, 243, 227, 1); /* 필요에 따라 색상 조정 */
+}
+
+.clicktext2 {
+    position: fixed;
+    top: 30px;  /* 원하는 만큼 조절 */
+    left: 45px; /* 오른쪽 끝에서 20px 간격 */
+    font-size: 20px; /* 크기 조정 */
+    color: rgba(247, 243, 227, 1); /* 필요에 따라 색상 조정 */
+}
+
+.font3 {
+    font-family: "Dawning of a New Day", cursive;
+    font-weight: 100;
+    font-size: 20px;  
+    color:rgba(247, 243, 227, 1)
+
+}
+
+
+body {
+    cursor: none; /* 기본 커서 숨기기 */
+}
+
+body {
+    cursor: none; /* 기본 커서 숨기기 */
+}
+
+body {
+    cursor: none; /* 기본 커서 숨기기 */
+}
+
+body::after {
+    content: '';
+    position: fixed;
+    top: var(--cursor-y, 0);
+    left: var(--cursor-x, 0);
+    width: 20px; /* 원 크기 */
+    height: 20px; /* 원 크기 */
+    border: 1px solid rgba(255, 255, 255, 0); /* 흰색 선으로 원 만들기 */
+    background-color: transparent; /* 배경을 투명으로 설정 */
+    border-radius: 50%; /* 원 모양 */
+    pointer-events: none; /* 클릭 방지 */
+    transition: transform 0.1s ease; /* 부드러운 전환 효과 */
+    box-shadow: 0 0 10px 5px rgba(255, 255, 255, 0.6); /* 빛나는 효과 */
+}
+
+
+
+@keyframes fadeBlink {
+    0% { opacity: 0; transform: translateY(30px); }
+    50% { opacity: 1; transform: translateY(0); }
+    100% { opacity: 0; transform: translateY(30px); }
+}
+
+.fade-text {
+    position: fixed;
+    right: -200px;
+    bottom: 40px;
+    font-size: 80px; 
+    color: rgba(247, 243, 227, 1); 
+    opacity: 0; 
+    animation: fadeBlink 8s infinite ease-in-out; 
+}
+
+.font4 {
+    font-family: 'Dawning of a New Day', cursive;
+    font-weight: 100;
+    font-size: 25px;  
+    color: rgba(247, 243, 227, 1);  
+    opacity: 80%;
+}

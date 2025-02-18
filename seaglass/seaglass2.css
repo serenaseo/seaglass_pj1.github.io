@@ -1,0 +1,316 @@
+@import url('https://fonts.googleapis.com/css2?family=Dawning+of+a+New+Day&display=swap'); 
+@import url('https://fonts.googleapis.com/css2?family=Quattrocento&display=swap');
+
+.past-present-future {
+    position: fixed;
+    left: 20px; /* 왼쪽에 고정 */
+    top: 20px; /* 하단에 위치 */
+    display: flex; /* 수평으로 정렬 */
+    justify-content: space-around; /* 각 텍스트 사이에 간격을 균등하게 배치 */
+    align-items: center; /* 세로로 가운데 정렬 */
+    width: 100%; /* 화면 전체 폭 */
+    font-size: 17px; /* 기본 텍스트 크기 */
+    text-align: center; /* 텍스트 중앙 정렬 */
+}
+
+.past-present-future p {
+    margin: 0; /* 기본 마진 제거 */
+    opacity: 0.8; /* 기본 불투명도 */
+    transition: transform 0.3s ease, opacity 0.3s ease, font-size 0.3s ease, text-shadow 0.3s ease; /* 전환 효과 */
+}
+
+/* hover 효과 */
+.past-present-future p:hover {
+    transform: scale(1.2); /* 텍스트 크기 살짝 확대 */
+    opacity: 1; /* 불투명도 100% */
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.8), 0 0 20px rgba(255, 255, 255, 0.6); /* 텍스트에 빛나는 효과 추가 */
+}
+
+.font10{
+    font-family: 'Quattrocento', serif;
+    color: rgba(247, 243, 227, 1); 
+    text-align: center;
+}
+body {
+    background-image: url("1img/bg2-3.png"); 
+    background-size:fixed; 
+    background-position:top; 
+    margin: 0;
+    overflow-x: hidden; 
+    min-height: 100vh; 
+    position: relative;
+}
+.questionmark {
+    position: fixed;
+    width: 400px;  /* Adjusted width */
+    height: 400px; /* Adjusted height */
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(0, 0, 0, 0); /* Transparent background */
+    opacity: 0.4;
+    transition: opacity 0.3s ease, transform 0.3s ease;
+    z-index: 10; /* Ensures it is above other content */
+}
+
+.questionmark img {
+    width: 100%; /* Ensures the image scales inside the container */
+    height: auto; /* Maintain aspect ratio */
+}
+
+.questionmark:hover {
+    opacity: 0.8;  /* Fully opaque on hover */
+    transform: translate(-50%, -50%) scale(2);  /* Enlarges the image */
+}
+
+@keyframes fade-in-out {
+    0% {
+        opacity: 0;
+    }
+    50% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
+.circle-container {
+    position: fixed;
+    top: 50%; 
+    left: 40%; 
+    width: 400px;
+    height: 400px;
+    transform: translate(-50%, -50%);
+}
+
+.rotating-image {
+    position: absolute;
+    width: 600px; 
+    height: auto;
+    transition: transform 2s ease-out;
+    opacity:50%;
+
+}
+
+
+.rotating-image:nth-child(1) { 
+    top: -50pxs;
+    left:50px;
+    transform: rotate(0deg) translate(180px) rotate(0deg); }
+.rotating-image:nth-child(2) { 
+    top:-150px;
+    left:80px;
+    transform: rotate(120deg) translate(180px) rotate(-120deg); }
+.rotating-image:nth-child(3) { 
+    top:-60px;
+    left:170px;
+    transform: rotate(240deg) translate(180px) rotate(-240deg); }
+
+
+
+.font1 {
+    font-family: 'Quattrocento', serif;
+    font-size: 50px; 
+    color: rgba(247, 243, 227, 1); 
+    text-align: center;
+}
+
+
+
+
+@keyframes fadeBlink {
+    0% { opacity: 0; transform: translateY(30px); }
+    50% { opacity: 1; transform: translateY(0); }
+    100% { opacity: 0; transform: translateY(30px); }
+}
+
+.fade-text {
+    position: fixed;
+    right: 700px;
+    bottom: 40px;
+    font-size: 80px; 
+    color: rgba(247, 243, 227, 1); 
+    opacity: 0; 
+    animation: fadeBlink 8s infinite ease-in-out; 
+}
+
+
+.font2 {
+    font-family: 'Dawning of a New Day', cursive;
+    font-weight: 100;
+    font-size: 25px;  
+    color: rgba(247, 243, 227, 1);  
+    opacity: 80%;
+}
+
+
+
+.wave-text span {
+    position: relative;
+    top: -140px;
+    display: inline-block;
+    font-size: 2.5rem;
+    font-weight: 100;
+    animation: wave 2s ease-in-out infinite;
+    line-height: 3rem;
+}
+
+.wave-text span:nth-child(odd) {
+    animation-delay: 0s;
+}
+
+.wave-text span:nth-child(even) {
+    animation-delay: 0.2s;
+}
+
+@keyframes wave {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    30% {
+        transform: translateY(-10px);
+    }
+}
+
+.wave-text span:hover {
+    text-shadow: 0 0 8px rgba(255, 255, 255, 0.8), 0 0 20px rgba(255, 255, 255, 0.6), 0 0 40px rgba(255, 255, 255, 0.4);
+    color: #ffffff; /* Make text white or any color you prefer */
+}
+
+.questions, .questions2 p.left-align, .questions2 p.right-align {
+    position: fixed;
+}
+
+.questions {
+    display: flex;
+    gap: 800px;
+    left: 80px;
+    top: 500px;
+}
+
+.questions2 p.left-align {
+    bottom: 10px; 
+    left: 50px; 
+    text-align: left;
+}
+
+.questions2 p.right-align {
+    bottom: 10px; 
+    right: 50px; 
+    text-align: right;
+}
+
+.bar-image {
+    position: fixed;
+    width: 400px; 
+    opacity: 0.6;
+    transition: opacity 0.3s ease;
+}
+
+.bar-image:hover {
+    opacity: 1;
+}
+
+.circular-text {
+    position: fixed;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 20px;
+    text-align: center;
+}
+
+.click-image {
+    position: fixed;
+    bottom: -100px;
+    left: 36.5%; 
+    width: 400px;
+    opacity: 80%;
+    display: block; 
+    margin: 0 auto; 
+}
+
+.next-button {
+    position: fixed; /* 화면에 고정 */
+    top: -80px; /* 위쪽 여백 */
+    right: -65px; /* 오른쪽 여백 */
+    width: 250px; /* 버튼 크기 (적당히 조절 가능) */
+    height: auto; /* 비율 유지 */
+    cursor: pointer; /* 클릭 가능하도록 설정 */
+    z-index: 100; /* 다른 요소 위에 배치 */
+    opacity: 0.8; /* 기본적으로 투명하게 설정 */
+    transition: opacity 0.5s ease, transform 0.3s ease; /* 부드러운 전환 효과 */
+}
+
+.next-button:hover {
+    opacity: 1;  /* 마우스 올리면 완전 불투명 */
+    transform: scale(1.2);  /* 약간 확대 */
+}
+
+.back-button {
+    position: fixed; /* 화면에 고정 */
+    top: -80px; /* 위쪽 여백 */
+    left: -65px; /* 왼쪽 여백 */
+    width: 250px; /* 버튼 크기 (적당히 조절 가능) */
+    height: auto; /* 비율 유지 */
+    cursor: pointer; /* 클릭 가능하도록 설정 */
+    z-index: 100; /* 다른 요소 위에 배치 */
+    opacity: 0.4; /* 기본적으로 투명하게 설정 */
+    transition: opacity 0.3s ease, transform 0.3s ease; /* 부드러운 전환 효과 */
+}
+
+.back-button:hover, .next-button:hover {
+    opacity: 1;  /* 마우스 올리면 완전 불투명 */
+    transform: scale(1.2);  /* 약간 확대 */
+}
+
+.clicktext {
+    position: fixed;
+    top: 30px;  /* 원하는 만큼 조절 */
+    right: 50px; /* 오른쪽 끝에서 20px 간격 */
+    font-size: 20px; /* 크기 조정 */
+    color: rgba(247, 243, 227, 1); /* 필요에 따라 색상 조정 */
+}
+
+.clicktext2 {
+    position: fixed;
+    top: 30px;  /* 원하는 만큼 조절 */
+    left: 45px; /* 오른쪽 끝에서 20px 간격 */
+    font-size: 20px; /* 크기 조정 */
+    color: rgba(247, 243, 227, 1); /* 필요에 따라 색상 조정 */
+}
+
+
+
+
+body {
+    cursor: none; /* 기본 커서 숨기기 */
+}
+
+body {
+    cursor: none; /* 기본 커서 숨기기 */
+}
+
+body {
+    cursor: none; /* 기본 커서 숨기기 */
+}
+
+body::after {
+    content: '';
+    position: fixed;
+    top: var(--cursor-y, 0);
+    left: var(--cursor-x, 0);
+    width: 20px; /* 원 크기 */
+    height: 20px; /* 원 크기 */
+    border: 1px solid rgba(255, 255, 255, 0); /* 흰색 선으로 원 만들기 */
+    background-color: transparent; /* 배경을 투명으로 설정 */
+    border-radius: 50%; /* 원 모양 */
+    pointer-events: none; /* 클릭 방지 */
+    transition: transform 0.1s ease; /* 부드러운 전환 효과 */
+    box-shadow: 0 0 10px 5px rgba(255, 255, 255, 0.6); /* 빛나는 효과 */
+}

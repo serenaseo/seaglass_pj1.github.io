@@ -1,0 +1,155 @@
+
+<div id="page1">
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>I want to age like a sea glass</title>
+        <link rel="stylesheet" href="seaglass1.css"> 
+        <section id="page1"></id>
+        <style>
+            @import url('https://fonts.googleapis.com/css2?family=Dawning+of+a+New+Day&display=swap'); 
+            
+        </style>
+    </head>
+    
+    <body>
+    
+        <h1 class="font1"></h1>
+        <div class="circle-container">
+            <img src="1img/past1.png" class="rotating-image" alt="Image 1">
+            <img src="1img/present.png" class="rotating-image" alt="Image 2">
+            <img src="1img/future.png" class="rotating-image" alt="Image 3">
+        </div>
+    
+        <div class="past-present-future">
+            <img src="1img/past0.png" class="bar-image" alt="image1">
+            <img src="1img/present0.png" class="bar-image" alt="image1">
+            <img src="1img/future0.png" class="bar-image" alt="image1">
+        </div>
+       
+     
+    
+       
+    </body>  
+    <script src=seaglass1.js></script>
+    
+    <script>
+    
+    let page1 = document.querySelector('.page1');
+            let page2 = document.querySelector('.page2');
+    
+            window.addEventListener('scroll', function() {
+                // 첫 번째 페이지 끝날 때 두 번째 페이지로 전환
+                if (window.scrollY > window.innerHeight / 2) {
+                    page1.style.opacity = 0; // 첫 번째 페이지 숨기기
+                    page2.style.display = 'flex'; // 두 번째 페이지 보이기
+                    page2.style.opacity = 1; // 두 번째 페이지 표시
+                } else {
+                    page1.style.opacity = 1; // 첫 번째 페이지 보이기
+                    page2.style.opacity = 0; // 두 번째 페이지 숨기기
+                }
+            });
+    
+    
+    </script>
+    </html>
+    
+    </div>
+
+<!-- 페이지 2 -->
+<div id="page2">
+    <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>I want to age like a sea glass</title>
+    <link rel="stylesheet" href="seaglass2.css"> 
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Dawning+of+a+New+Day&display=swap'); 
+        @import url('https://fonts.googleapis.com/css2?family=Quattrocento&display=swap');
+    </style>
+        <section id="page2"></id>
+
+</head>
+
+<body>
+    <div class="questionmark">
+        <img src="1img/question.png" class="bar-image" alt="image1">
+    </div>
+
+    <div class="wave-container questions">
+        <h1 class="wave-text font1">
+            <span>W</span><span>h</span><span>a</span><span>t</span>
+            <span>a</span><span>r</span><span>e</span>
+            <span>t</span><span>h</span><span>e</span>
+            <span>t</span><span>i</span><span>d</span><span>e</span><span>s</span>
+            <span>i</span><span>n</span><br>
+            <span>y</span><span>o</span><span>u</span><span>r</span>
+            <span>l</span><span>i</span><span>f</span><span>e</span>
+            <span>t</span><span>h</span><span>a</span><span>t</span><br>
+            <span>s</span><span>h</span><span>a</span><span>p</span><span>e</span>
+            <span>y</span><span>o</span><span>u</span><span>?</span>
+
+        </h1>
+
+        <h1 class="wave-text font1">
+            <span>W</span><span>h</span><span>a</span><span>t</span>
+            <span>s</span><span>h</span><span>a</span><span>r</span><span>p</span>
+            <span>e</span><span>d</span><span>g</span><span>e</span><span>s</span><br>
+            <span>h</span><span>a</span><span>v</span><span>e</span>
+            <span>s</span><span>o</span><span>f</span><span>t</span><span>e</span><span>n</span><span>e</span><span>d</span><br>
+            <span>w</span><span>i</span><span>t</span><span>h</span>
+            <span>t</span><span>i</span><span>m</span><span>e</span>
+         </h1>
+
+    </div>
+
+      
+
+    <div class="questions2 font2">
+        <p class="left-align">
+            Like sea glass,<br> 
+            we are all shaped by life’s currents.<br> 
+            Every jagged edge tells a story,<br> 
+        </p>
+        <p class="right-align">
+            every smooth surface reflects healing.<br> 
+            Embrace your journey,<br> 
+            and treasure<br> 
+            the beauty it creates.<br>        
+        </p>
+    </div>
+
+
+
+
+</div>
+
+    
+    
+</body>
+<script src=seaglass.js></script>
+</html>
+
+    
+</div>
+
+<script>
+    let page1 = document.querySelector('#page1'); // #page1 선택
+    let page2 = document.querySelector('#page2'); // #page2 선택
+
+    window.addEventListener('scroll', function() {
+        // 첫 번째 페이지 끝날 때 두 번째 페이지로 전환
+        if (window.scrollY > window.innerHeight / 2) {
+            page1.style.opacity = 0; // 첫 번째 페이지 숨기기
+            page2.style.display = 'flex'; // 두 번째 페이지 보이기
+            page2.style.opacity = 1; // 두 번째 페이지 표시
+        } else {
+            page1.style.opacity = 1; // 첫 번째 페이지 보이기
+            page2.style.opacity = 0; // 두 번째 페이지 숨기기
+        }
+    });
+</script>

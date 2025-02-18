@@ -1,0 +1,316 @@
+@import url('https://fonts.googleapis.com/css2?family=Dawning+of+a+New+Day&display=swap');
+
+
+
+body {
+    background-image: url("1img/bg2-3.png"); 
+    background-size:fixed; 
+    background-position:top; 
+    margin: 0;
+    overflow-x: hidden; 
+    min-height: 100vh; 
+    position: relative;
+}
+
+
+.font3 {
+    font-family: "Dawning of a New Day", cursive;
+    font-weight: 100;
+    font-size: 20px;  
+    color:rgba(247, 243, 227, 1)
+}
+
+.font10{
+    font-family: 'Quattrocento', serif;
+    color: rgba(247, 243, 227, 1); 
+    text-align: center;
+}
+
+
+.past-present-future {
+    position: fixed;
+    left: 20px; 
+    top: 20px; 
+    display: flex; 
+    justify-content: space-around; 
+    align-items: center; 
+    width: 100%; 
+    font-size: 17px; 
+    text-align: center;
+}
+
+.past-present-future p {
+    margin: 0; 
+    opacity: 0.8; 
+    transition: transform 0.3s ease, opacity 0.3s ease, font-size 0.3s ease, text-shadow 0.3s ease; 
+}
+
+.past-present-future p:hover {
+    transform: scale(1.2); 
+    opacity: 1; 
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.8), 0 0 20px rgba(255, 255, 255, 0.6); 
+}
+
+
+.content {
+    position: relative;
+    z-index: 1;
+    text-align: center;
+    color: white;
+    font-size: 24px;
+    line-height: 1.5;
+    padding-top: 50px;
+    padding-bottom: 5000px;
+}
+
+.hidden-text {
+    font-family: "Dawning of a New Day", cursive;
+    font-size: 80px;
+    opacity: 0;
+    transform: translateY(50px);
+    transition: opacity 1.5s ease-out, transform 1.5s ease-out;
+}
+
+.hidden-text { 
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.font1 {
+    font-family: "Dawning of a New Day", cursive;
+    font-weight: 200;
+    font-style: normal;
+    font-size: 80px; 
+    color:rgba(247, 243, 227, 1);
+    text-align: center;
+    opacity:80%;
+}
+
+
+@keyframes fadeBlink {
+    0% { opacity: 0; transform: translateY(30px); }
+    50% { opacity: 1; transform: translateY(0); }
+    100% { opacity: 0; transform: translateY(30px); }
+}
+
+.fade-text {
+    position: fixed;
+    right: 700px;
+    bottom: 40px;
+    font-size: 80px; 
+    color: rgba(247, 243, 227, 1); 
+    opacity: 0; 
+    animation: fadeBlink 8s infinite ease-in-out; 
+}
+
+
+
+
+.circle-container {
+    position: fixed;
+    top: 90%; 
+    left: 50%; 
+    width: 400px;
+    height: 400px;
+    transform: translate(-50%, -50%);
+}
+
+.rotating-image {
+    position: absolute;
+    width: 600px; 
+    height: auto;
+    transition: transform 2s ease-out;
+    opacity:50%;
+
+}
+.rotating-image:nth-child(1) { 
+    top:10px;
+    left:50px;
+    transform: rotate(0deg) translate(180px) rotate(0deg); }
+.rotating-image:nth-child(2) { 
+    top:-30px;
+    left:80px;
+    transform: rotate(120deg) translate(180px) rotate(-120deg); }
+.rotating-image:nth-child(3) { 
+    top:-20px;
+    left:170px;
+    transform: rotate(240deg) translate(180px) rotate(-240deg); }
+
+
+
+
+    .font1, .hidden-text {
+        font-size: 30px;
+    }
+
+    
+
+    .circle-container {
+        top: 100px; /* 원하는 값으로 조절 */
+        left: 40%;
+        transform: translateX(-50%);
+        
+        
+    }
+
+
+
+
+.next-button {
+    position: fixed; /* 화면에 고정 */
+    top: -80px; /* 위쪽 여백 */
+    right: -65px; /* 오른쪽 여백 */
+    width: 250px; /* 버튼 크기 (적당히 조절 가능) */
+    height: auto; /* 비율 유지 */
+    cursor: pointer; /* 클릭 가능하도록 설정 */
+    z-index: 100; /* 다른 요소 위에 배치 */
+    opacity: 0.8; /* 기본적으로 투명하게 설정 */
+    transition: opacity 0.5s ease, transform 0.3s ease; /* 부드러운 전환 효과 */
+}
+
+.next-button:hover {
+    opacity: 1;  /* 마우스 올리면 완전 불투명 */
+    transform: scale(1.2);  /* 약간 확대 */
+}
+
+.back-button {
+    position: fixed; /* 화면에 고정 */
+    top: -80px; /* 위쪽 여백 */
+    left: -65px; /* 왼쪽 여백 */
+    width: 250px; /* 버튼 크기 (적당히 조절 가능) */
+    height: auto; /* 비율 유지 */
+    cursor: pointer; /* 클릭 가능하도록 설정 */
+    z-index: 100; /* 다른 요소 위에 배치 */
+    opacity: 0.4; /* 기본적으로 투명하게 설정 */
+    transition: opacity 0.3s ease, transform 0.3s ease; /* 부드러운 전환 효과 */
+}
+
+.back-button:hover, .next-button:hover {
+    opacity: 1;  /* 마우스 올리면 완전 불투명 */
+    transform: scale(1.2);  /* 약간 확대 */
+}
+
+.clicktext {
+    position: fixed;
+    top: 30px;  /* 원하는 만큼 조절 */
+    right: 50px; /* 오른쪽 끝에서 20px 간격 */
+    font-size: 20px; /* 크기 조정 */
+    color: rgba(247, 243, 227, 1); /* 필요에 따라 색상 조정 */
+}
+
+.clicktext2 {
+    position: fixed;
+    top: 30px;  /* 원하는 만큼 조절 */
+    left: 45px; /* 오른쪽 끝에서 20px 간격 */
+    font-size: 20px; /* 크기 조정 */
+    color: rgba(247, 243, 227, 1); /* 필요에 따라 색상 조정 */
+}
+
+
+
+body {
+    cursor: none; /*커서*/
+}
+
+body {
+    cursor: none; 
+}
+
+body {
+    cursor: none;
+}
+
+body::after {
+    content: '';
+    position: fixed;
+    top: var(--cursor-y, 0);
+    left: var(--cursor-x, 0);
+    width: 20px; 
+    height: 20px; 
+    border: 1px solid rgba(255, 255, 255, 0); 
+    background-color: transparent; 
+    border-radius: 50%; 
+    pointer-events: none; 
+    transition: transform 0.1s ease; 
+    box-shadow: 0 0 10px 5px rgba(255, 255, 255, 0.6); /*커서 끝*/
+}
+@media (max-width: 850px) {
+
+    .font1 {
+        font-size: 30px;  /* 폰트 크기 줄이기 */
+    }
+    
+    .font10{
+        font-size:15px
+
+    }
+
+    .circle-container {
+        top: 30%; /* 위치 조정 */
+        left: 30%; 
+        width: 100px; /* 크기 조정 */
+        height: 100px; /* 크기 조정 */
+    }
+
+    .rotating-image {
+        width: 400px; /* 이미지 크기 조정 */
+    }
+
+    .next-button, .back-button {
+        width: 150px;  /* 버튼 크기 조정 */
+        top: -32px;
+    }
+        .next-button {
+            right: -20px; /* 오른쪽 버튼 위치 조정 */
+        }
+        
+        .back-button {
+            left: -20px; /* 왼쪽 버튼 위치 조정 */
+        }
+    }
+
+    .clicktext, .clicktext2 {
+        font-size: 15px; /* 폰트 크기 줄이기 */
+    }
+
+
+/* 미디어 쿼리: 화면 크기 500px 이하 */
+@media (max-width: 500px) {
+
+    .font1 {
+        font-size: 20px;  /* 폰트 크기 더 줄이기 */
+    }
+
+    .font10{
+        font-size:10px
+
+    }
+    .circle-container {
+        top: 40%; /* 위치 조정 */
+        left: 10%; 
+        width: 50px; /* 크기 조정 */
+        height: 50px; /* 크기 조정 */
+    }
+
+    .rotating-image {
+        width: 300px; /* 이미지 크기 조정 */
+    }
+
+ 
+    .next-button, .back-button {
+        width: 150px;  /* 버튼 크기 조정 */
+        top: -32px;
+    }
+        .next-button {
+            right: -20px; /* 오른쪽 버튼 위치 조정 */
+        }
+        
+        .back-button {
+            left: -20px; /* 왼쪽 버튼 위치 조정 */
+        }
+    }
+
+    .clicktext, .clicktext2 {
+        font-size: 10px; /* 폰트 크기 더 줄이기 */
+    }
+}
